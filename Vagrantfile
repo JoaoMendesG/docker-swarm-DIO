@@ -21,9 +21,9 @@ Vagrant.configure("2") do |config|
       machine.vm.provision "shell", path: "script-docker.sh"
       
       if "#{name}" == "master"
-        machine.vm.provision "shell", path: "master.sh"
+        machine.vm.provision "shell", path: "script-master.sh"
       else
-        machine.vm.provision "shell", path: "worker.sh"
+        machine.vm.provision "shell", path: "script-worker.sh"
       end
     end
   end
